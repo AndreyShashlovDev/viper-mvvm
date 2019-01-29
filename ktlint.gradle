@@ -14,7 +14,7 @@ task ktlint(type: JavaExec, group: "verification") {
     description = "Check Kotlin code style."
     classpath = configurations.ktlint
     main = "com.github.shyiko.ktlint.Main"
-    args "--android"
+    args "--android", "src/**/*.kt"
 }
 
 task ktlintFormat(type: JavaExec, group: "formatting") {
